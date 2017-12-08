@@ -1,0 +1,110 @@
+.postFooter {
+  font-family: 'OpenSans-Regular',serif;
+  margin-top: auto;
+  flex-shrink: 0;
+  flex-grow: 0; }
+  .postFooter .socialPanel .authorPanel {
+    display: inline-block;
+    text-align: center; }
+    .postFooter .socialPanel .authorPanel .authorPhoto {
+      float: left; }
+      .postFooter .socialPanel .authorPanel .authorPhoto .avatar {
+        border-radius: 50%;
+        width: 48px; }
+    .postFooter .socialPanel .authorPanel .authorName {
+      color: grey;
+      float: left;
+      font-size: 14px;
+      text-align: left;
+      width: 55%;
+      padding: 0 15px;
+      line-height: 20px;
+      padding-top: 5px; }
+      .postFooter .socialPanel .authorPanel .authorName a {
+        color: grey; }
+      .postFooter .socialPanel .authorPanel .authorName span {
+        display: inline; }
+  .postFooter .socialPanel .shareBox {
+    display: inline-block;
+    line-height: 50px;
+    vertical-align: top; }
+    .postFooter .socialPanel .shareBox .media {
+      display: inline-block; }
+      .postFooter .socialPanel .shareBox .media span {
+        font-size: 16px;
+        margin-right: 10px;
+        color: gray; }
+      .postFooter .socialPanel .shareBox .media a {
+        padding: 5px 0;
+        font-size: 16px; }
+        .postFooter .socialPanel .shareBox .media a .mdi {
+          padding: 0 10px;
+          transition: background-image .4s linear;
+          transition: box-shadow .4s linear; }
+        .postFooter .socialPanel .shareBox .media a:not(:last-child) {
+          margin-right: 7px; }
+        .postFooter .socialPanel .shareBox .media a:hover {
+          color: white;
+          box-shadow: 0 14px 30px rgba(0, 137, 255, 0.4); }
+        .postFooter .socialPanel .shareBox .media a.facebook {
+          background: #3B5998; }
+          .postFooter .socialPanel .shareBox .media a.facebook:hover {
+            box-shadow: 0 8px 20px rgba(59, 89, 152, 0.5);
+            background-image: -webkit-linear-gradient(right, #3B5998, #4769B1, #3B5998);
+            background-image: -o-linear-gradient(right, #3B5998, #4769B1, #3B5998);
+            background-image: -moz-linear-gradient(right, #3B5998, #4769B1, #3B5998);
+            background-image: linear-gradient(right, #3B5998, #4769B1, #3B5998); }
+        .postFooter .socialPanel .shareBox .media a.twitter {
+          background: #4099FF; }
+          .postFooter .socialPanel .shareBox .media a.twitter:hover {
+            box-shadow: 0 8px 20px rgba(64, 153, 255, 0.5);
+            background-image: -webkit-linear-gradient(right, #4099FF, #63AAFC, #4099FF);
+            background-image: -o-linear-gradient(right, #4099FF, #63AAFC, #4099FF);
+            background-image: -moz-linear-gradient(right, #4099FF, #63AAFC, #4099FF);
+            background-image: linear-gradient(to right, #4099FF, #63AAFC, #4099FF); }
+        .postFooter .socialPanel .shareBox .media a.linkedin {
+          background: #006097; }
+          .postFooter .socialPanel .shareBox .media a.linkedin:hover {
+            box-shadow: 0 8px 20px rgba(0, 96, 151, 0.5);
+            background-image: -webkit-linear-gradient(right, #006097, #1078B4, #006097);
+            background-image: -o-linear-gradient(right, #006097, #1078B4, #006097);
+            background-image: -moz-linear-gradient(right, #006097, #1078B4, #006097);
+            background-image: linear-gradient(to right, #006097, #1078B4, #006097); }
+    .postFooter .socialPanel .shareBox .the_champ_horizontal_sharing {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px; }
+  .postFooter .footerPanel {
+    line-height: 80px;
+    background-color: #484754;
+    color: white;
+    padding: 0 24px; }
+    .postFooter .footerPanel .social {
+      display: inline-block; }
+      .postFooter .footerPanel .social a {
+        padding-right: 10px;
+        color: #FFFFFF;
+        display: inline-block; }
+        .postFooter .footerPanel .social a .mdi {
+          font-size: 24px;
+          vertical-align: middle;
+          transition: .5s; }
+          .postFooter .footerPanel .social a .mdi:hover {
+            color: #0089FF;
+            transition: .5s; }
+    .postFooter .footerPanel .copyright {
+      font-size: 13px;
+      display: inline-block; }
+    .postFooter .footerPanel .links {
+      font-size: 65%;
+      display: inline-block; }
+      .postFooter .footerPanel .links a {
+        margin-left: 10px;
+        font-size: 13px;
+        color: #ffFFFF;
+        transition: .5s; }
+        .postFooter .footerPanel .links a:hover {
+          color: #0089FF;
+          transition: .5s; }
+
+/*# sourceMappingURL=style.css.map */

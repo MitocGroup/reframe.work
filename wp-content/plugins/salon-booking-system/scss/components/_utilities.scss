@@ -1,0 +1,145 @@
+// LOADER
+.sln-loader {
+  font-size: 1px;
+  @extend %absolute-centering;
+  &:after {
+    @include font-icon(75em);
+    display: block;
+    content: "\f1ce";
+    @extend %text-color--emphasis;
+    -webkit-animation: wait 2s infinite linear;
+    animation: wait 2s infinite linear;
+    @include ie11() {
+      @include font-icon(75px);
+    }
+  }
+}
+
+@-webkit-keyframes wait {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wait {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+// LOADER // END
+// PANELS
+#sln-salon .sln-panel {
+    &:last-child {margin-bottom: 2em;}
+  .sln-panel-heading {
+    @extend %sln-textsize--base;
+    @extend %text-color--emphasis;
+    margin-bottom: 0;
+    border: none;
+    .sln-btn.sln-btn--big,
+    .sln-btn.sln-btn--medium,
+    .sln-btn--noheight {
+      display: block;
+      margin-bottom: 0;
+      font-weight: bold;
+      text-align: left;
+      //line-height: 2.9em;
+      //height: 2.9em;
+      @extend %sln-textsize--base;
+      padding-left: calc(16.66666667% + 15px);
+      @include bp(tablet) {
+        padding-left: calc(8.33333333% + 15px);
+      }
+      &:after {
+        //@extend %sln-textsize--base;
+        @extend %absolute-vertical-centering;
+        bottom: auto;
+        bottom: initial;
+        content: '\f068';
+        left: 12px;
+      }
+      &:hover {
+        &:after {content: '\f077';}
+      }
+    }
+    .sln-btn--borderonly {
+      border-bottom-width: 0;
+      @extend %bgc-color--emphasis;
+      @extend %bd-color--emphasis;
+      @extend %text-color--white;
+      &:hover {
+        @extend %bgc-color--emphasis--hover;
+        @extend %bd-color--emphasis--hover;
+      }
+    }
+    .sln-btn--nobkg {
+      @extend %bgc-color--emphasis;
+      @extend %text-color--white;
+      font-weight: normal;
+      &:hover {
+        @extend %bgc-color--emphasis--hover;
+      }
+    }
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+    &.collapsed {
+      margin-bottom: 1em;
+      .sln-btn.sln-btn--medium,
+      .sln-btn--noheight {
+        &:after {content: '\f067';}
+        &:hover {
+          &:after {content: '\f078';}
+        }
+      }
+      .sln-btn--borderonly {
+        border-bottom-width: 1px;
+        @extend %bgc-color--transparent;
+        @extend %text-color--emphasis;
+        &:hover {
+          @extend %bgc-color--emphasis--hover;
+          @extend %text-color--white;
+        }
+      }
+      .sln-btn--nobkg {
+        @extend %bgc-color--transparent;
+        @extend %text-color--emphasis;
+        &:hover {
+          @extend %bgc-color--emphasis--hover;
+          @extend %text-color--white;
+        }
+      }
+    }
+  }
+  .sln-panel-content {
+    width: calc(100% - 30px);
+    margin: 0 15px 2em 15px;
+    padding-top: 1em;
+    //border-style: solid;
+    //border-width: 1px;
+    //@extend %bd-color--contrast--alpha;
+  }
+}
+// PANELS // END
+// VALIDATION
+#sln-salon .sln-invalid,
+#sln-salon .sln-input .sln-invalid {
+  @extend %bd-color--problem;
+  @include placeholder-color($sln-color--problem);
+}
+// VALIDATION // END

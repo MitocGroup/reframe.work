@@ -1,0 +1,130 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
+$fontfamily--main: 'Open Sans', sans-serif;
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// SIZES
+%font-bigger {
+  font-family: $fontfamily--main;
+  font-size: rem(20px);
+  line-height: rem(34px);
+  font-weight: normal;
+  @include bp(tablet) {
+    font-size: rem(24px);
+  }
+}
+%font-big {
+  font-family: $fontfamily--main;
+  font-size: rem(18px);
+  font-weight: normal;
+  line-height: rem(28px);
+  font-weight: normal;
+}
+
+%font-medium {
+  font-family: $fontfamily--main;
+  font-size: rem(16px);
+  line-height: rem(22px);
+  font-weight: normal;
+}
+
+%font-small {
+  font-family: $fontfamily--main;
+  font-size: rem(14px);
+  line-height: rem(20px);
+  font-weight: normal;
+}
+
+%font-bigger-n {
+  font-family: $fontfamily--main;
+  font-size: em(20px);
+  line-height: em(34px);
+   font-weight: normal;
+  @include bp(tablet) {
+    font-size: em(24px);
+  }
+}
+%font-big-n {
+  font-family: $fontfamily--main;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.8em;
+  font-weight: normal;
+}
+
+%font-medium-n {
+  font-family: $fontfamily--main;
+  font-size: em(16px);
+  line-height: em(22px);
+  font-weight: normal;
+}
+
+%font-small-n {
+  font-family: $fontfamily--main;
+  font-size: em(14px);
+  line-height: em(20px);
+  font-weight: normal;
+}
+
+// SIZES // END
+
+// COLORS
+%font-cl_standard {color: #444;}
+%font-cl_standard--medium {color: #888;}
+%font-cl_standard--light {color: #ccc;}
+%font-cl_main {color: $cl_main;}
+%font-cl_main--medium {color: $cl_main--medium;}
+%font-cl_main--light {color: $cl_main--light;}
+%font-cl_main--emphasis {color: $cl_main--emphasis;}
+%font-cl_problem {color: $cl_main;}
+%font-cl_problem--light {color: $cl_problem--light;}
+%font-cl_warning {color: $cl_warning;}
+%font-cl_warning--light {color: $cl_warning--light;}
+%font-cl_ok {color: $cl_ok;}
+// COLORS // END
+
+%font-icon {
+  //color: white;
+  font-family: "FontAwesome";
+  font-size: rem(22px);
+}
+%sln-textsize--bigger {
+  font-size: 1.4em;
+  @include bp(desktop) {font-size: 1.6em;}
+}
+@mixin font-icon($fontSize: null) {
+  font-family: "FontAwesome";
+  @if ($fontSize) {
+    font-size: $fontSize;
+    line-height: 0;
+  } @else {
+    font-size: 1em;
+    line-height: 0;
+  }
+}
+// /// /// /// /// /// /// /// //
+// /// FONT AWESOME
+// /// /// /// /// /// /// /// //
+$fa-font-path:        "../fonts" !default;
+$fa-version:          "4.4.0" !default;
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+    url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
+    url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
+    url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
+    url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+// /// FONT AWESOME // END
+
+// /// /// /// /// /// /// /// //
+// /// WORDPRESS OVERRIDES
+// /// /// /// /// /// /// /// //
+.wrap h2.nav-tab-wrapper {
+  font-size: 1em;
+}
+// /// WORDPRESS OVERRIDES // END

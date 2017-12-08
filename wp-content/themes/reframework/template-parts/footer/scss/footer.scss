@@ -1,0 +1,140 @@
+.postFooter {
+  font-family:'OpenSans-Regular',serif;
+  margin-top: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+  .socialPanel {
+    .authorPanel {
+      display:inline-block;
+      text-align: center;
+      .authorPhoto{
+        float:left;
+        .avatar {
+          border-radius: 50%;
+          width: 48px;
+        }
+      }
+      .authorName {
+        color: grey;
+        float: left;
+        font-size: 14px;
+        text-align: left;
+        width: 55%;
+        padding: 0 15px;
+        line-height: 20px;
+        padding-top: 5px;
+        a {
+          color:grey;
+        }
+        span {
+          display: inline;
+        }
+      }
+    }
+    .shareBox {
+      display:inline-block;
+      line-height: 50px;
+      vertical-align: top;
+      .media {
+        display: inline-block;
+        span {
+          font-size: 16px;
+          margin-right: 10px;
+          color:gray;
+        }
+        a {
+          padding: 5px 0;
+          font-size: 16px;
+          .mdi {
+            padding: 0 10px;
+            transition: background-image .4s linear;
+            transition: box-shadow .4s linear;
+          }
+          &:not(:last-child) {
+            margin-right: 7px;
+          }
+          &:hover {
+            color:white;
+            box-shadow:0 14px 30px rgba(0, 137, 255, 0.4);
+          }
+          &.facebook {
+            background: #3B5998;
+            &:hover {
+              box-shadow: 0 8px 20px rgba(59, 89, 152, 0.5);
+              background-image: -webkit-linear-gradient(right, #3B5998, #4769B1, #3B5998);
+              background-image: -o-linear-gradient(right, #3B5998, #4769B1, #3B5998);
+              background-image: -moz-linear-gradient(right, #3B5998, #4769B1, #3B5998);
+              background-image: linear-gradient(right, #3B5998, #4769B1, #3B5998);
+            }
+          }
+          &.twitter {
+            background: #4099FF;
+            &:hover {
+              box-shadow: 0 8px 20px rgba(64, 153, 255, 0.5);
+              background-image: -webkit-linear-gradient(right, #4099FF, #63AAFC, #4099FF);
+              background-image: -o-linear-gradient( right, #4099FF, #63AAFC, #4099FF);
+              background-image: -moz-linear-gradient(right, #4099FF, #63AAFC, #4099FF);
+              background-image: linear-gradient(to right, #4099FF, #63AAFC, #4099FF);
+            }
+          }
+          &.linkedin {
+            background: #006097;
+            &:hover {
+              box-shadow: 0 8px 20px rgba(0, 96, 151, 0.5);
+              background-image: -webkit-linear-gradient(right, #006097, #1078B4, #006097);
+              background-image: -o-linear-gradient(right, #006097, #1078B4, #006097);
+              background-image: -moz-linear-gradient(right, #006097, #1078B4, #006097);
+              background-image: linear-gradient(to right, #006097, #1078B4, #006097);
+            }
+          }
+        }
+      }
+      .the_champ_horizontal_sharing {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+    }    
+  }
+  .footerPanel {
+    line-height: 80px;
+    background-color: #484754;
+    color: white;
+    padding: 0 24px;
+    .social {
+      display: inline-block;
+      a {
+        padding-right: 10px;
+        color: #FFFFFF;
+        display: inline-block;
+        .mdi {
+          font-size: 24px;
+          vertical-align: middle;
+          transition: .5s;
+          &:hover {
+            color:#0089FF;
+            transition: .5s;
+          }
+        }
+      }
+    }
+    .copyright {
+      font-size: 13px;
+      display: inline-block;
+    }
+    .links {
+      font-size: 65%;
+      display: inline-block;
+      a {
+        margin-left: 10px;
+        font-size: 13px;
+        color: #ffFFFF;
+        transition: .5s;
+        &:hover {
+          color:#0089FF;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sticky Posts - Switch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-14 07:02+0000\n"
+"PO-Revision-Date: 2017-04-24 11:43+0000\n"
+"Last-Translator: m.froehlich@weseo.at <m.froehlich@weseo.at>\n"
+"Language-Team: German\n"
+"Language: de-DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: settings/class-settings.php:189
+msgid "Sticky Post Settings"
+msgstr "Einstellungen &rsaquo; Beitrag oben halten"
+
+#: settings/class-settings.php:301
+msgid "Change the display options for the admin sticky post column."
+msgstr ""
+"Ändere die Anzeigeoptionen der \"Beitrag oben halten\" Spalte in deiner "
+"Beitrags/Eigener Inhaltstyp Übersicht."
+
+#: settings/class-settings.php:305
+msgid "Handle the post selection of custom post types."
+msgstr "Anpassung der Beitrags Ausgabe von eigenen Inhaltstypen."
+
+#. Name of the plugin
+#: settings/class-settings.php:174 settings/class-settings.php:175
+msgid "Sticky Posts - Switch"
+msgstr "Sticky Posts - Switch"
+
+#: settings/class-settings.php:225
+msgid "Post Types"
+msgstr "Inhaltstypen"
+
+#: settings/class-settings.php:252
+msgid "Custom Post Types"
+msgstr "Eigene Inhaltstypen"
+
+#: settings/class-settings.php:259
+msgid "Posts selection"
+msgstr "Abfrage der Beiträge"
+
+#: settings/class-settings.php:265
+msgid "Dont change the order from the custom post types in the frontend."
+msgstr "Ändere nicht die Reihenfolge der Beiträge im Frontend."
+
+#: settings/class-settings.php:266
+msgid ""
+"Sticky posts is a WordPress feature only for posts, by default this plugin "
+"also prepare custom post types, to put the posts on the top."
+msgstr ""
+"Die \"Beiträge oben halten\" Funktion ist bei WordPress nur für die standard "
+"Beiträge vorgesehen. Dieses Plugin passt auch die eigenen Inhaltstypen an, "
+"um diese auf der Webseite oben zu halten."
+
+#: settings/class-settings.php:275
+msgid "Multilingual settings"
+msgstr "Mehrsprachige Beiträge"
+
+#: settings/class-settings.php:285
+msgid "Multilingual posts"
+msgstr "Mehrsprachige Beiträge"
+
+#: settings/class-settings.php:291
+msgid "Set all the translations sticky, when one post is set."
+msgstr ""
+"Halte alle mehrsprachigen Beiträge oben, wenn ein Beitrag gesetzt wird."
+
+#: settings/class-settings.php:325
+#, php-format
+msgid "Active multilingual plugin found: %s"
+msgstr "Aktives Mehrsprachen Plugin gefunden: %s"
+
+#: settings/class-settings.php:329
+msgid "There are no supported multilingual plugins active."
+msgstr "Es sind keine Unterstützten Plugins aktiv."
+
+#: settings/class-settings.php:334
+#, php-format
+msgid "Supported Plugins: %s, %s"
+msgstr "Unterstützte Plugins: %s, %s"
+
+#. Description of the plugin
+msgid ""
+"This plugin adds a sticky post switch functionality to the admin list "
+"post/custom post type pages."
+msgstr ""
+"Dieses Plugin fügt die \"Beitrag oben halten\" Funktion als Icon-Schalter in "
+"deiner Admin Beitrags/Eigener Inhaltstyp Übersicht hinzu."
+
+#. Author of the plugin
+msgid "Markus Froehlich"
+msgstr "Markus Froehlich"
+
+#. Author URI of the plugin
+msgid "mailto:markusfroehlich01@gmail.com"
+msgstr "mailto:markusfroehlich01@gmail.com"

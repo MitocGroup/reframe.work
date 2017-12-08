@@ -1,0 +1,310 @@
+// VARIABLES
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  &:focus {outline:0 !important;}
+}
+
+$browser-context: 18px;
+
+@function rem($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+
+@mixin bp($point) {
+  @if $point == desktop-xl {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+  @else if $point == desktop {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+  @else if $point == tablet {
+    @media only screen and (min-width: 768px){ @content; }
+  }
+  @else if $point == tablet-port {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+  @else if $point == tablet-max-port {
+    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $point == tablet-la {
+    @media all 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : landscape) { @content; }
+  }
+  @else if $point == phone {
+    @media only screen and (max-width: 767px)  { @content; }
+  }
+  @else if $point == phone-port {
+    @media only screen and (max-width: 320px)  { @content; }
+  }
+  @else if $point == phone-la {
+    @media only screen and (min-width: 321px) and (max-width: 568px)
+    and (orientation : landscape)  { @content; }
+  }
+}
+
+@mixin ie11() {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {@content;}
+}
+
+
+// MIXINS
+@mixin trans-generic ($speed) {
+  -webkit-transition: all $speed ease-in-out;
+  -moz-transition: all $speed ease-in-out;
+  -o-transition: all $speed ease-in-out;
+  transition: all $speed ease-in-out;
+}
+@mixin transition ($prop...) {
+  -webkit-transition: $prop;
+  -moz-transition: $prop;
+  -o-transition: $prop;
+  transition: $prop;
+}
+@mixin transform ($prop...) {
+  -webkit-transform: $prop;
+  -moz-transform: $prop;
+  -ms-transform: $prop;
+  -o-transform: $prop;
+  transform: $prop;
+}
+
+@mixin b-radius($value){
+  @if $value == 50% {
+    border-radius: 50%;
+    border-radius: 9999px;
+  }
+  border-top-left-radius: $value;
+  border-top-right-radius: $value;
+  border-bottom-left-radius: $value;
+  border-bottom-right-radius: $value;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.clearfix, .clear {
+  @include clearfix();
+}
+%absolute-centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+%absolute-horizontal-centering {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(0);
+  -ms-transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0);
+}
+%absolute-vertical-centering {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+%absolute-vertical-centering--override {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+
+%zDepth-1 {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+%zDepth-2 {
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23);
+}
+%zDepth-3 {
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23);
+}
+%zi-zero {
+  z-index: 0;
+}
+%zi-base {
+  z-index: 100;
+}
+%zi-fondo {
+  z-index: 200;
+}
+%zi-grafica {
+  z-index: 400;
+}
+%zi-highlights {
+  z-index: 600;
+}
+%zi-navigazione {
+  z-index: 800;
+}
+%zi-top {
+  z-index: 1000;
+}
+
+
+// FLEX
+%display-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// ANIMATIONS
+@-webkit-keyframes fade-in {
+    0% {opacity: 0;-webkit-transform: scale(0)}
+    100% {opacity: 1;-webkit-transform: scale(1);}
+}
+
+@-moz-keyframes fade-in {
+    0% {opacity: 0;-webkit-transform: scale(0)}
+    100% {opacity: 1;-webkit-transform: scale(1);}
+}
+
+@-ms-keyframes fade-in {
+    0% {opacity: 0;-webkit-transform: scale(0)}
+    100% {opacity: 1;-webkit-transform: scale(1);}
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;transform: scale(.99);}
+    100% {opacity: 1;transform: scale(1);}
+}
+
+
+@mixin fadein($time){
+    -webkit-animation: fade-in $time;
+    -moz-animation: fade-in $time;
+    -ms-animation: fade-in $time;
+    animation: fade-in $time;
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+     color: $color;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+     color: $color;
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+     color: $color;
+  }
+  &:-ms-input-placeholder {
+     color: $color;
+  }
+}
+
+// DROPDOWNS OVERRIDE
+$color-bg: #f8f8f8;
+$color-high: #076b9d;
+$color-mid: #666;
+$color-low: #999;
+$bg-high: #eee;
+$bg-contrast-high: #ddd;
+
+$icon-color-green: green;
+$icon-color-yellow: #FF9D03;
+
+$text-blue: #004664;
+$text-dark: #141412;
+$text-medium: #555555;
+
+$ca-red: #d51e26;
+$ca-red-h: #ff000b;
+$ca-grey: #ebebeb;
+$ca-blue: #428bca;
+
+@mixin box-shadow ($shadow) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+
+@mixin nav-divider ($color: #e5e5e5) {
+  height: 1px;
+  margin: (($line-height-computed / 2) - 1) 0;
+  overflow: hidden;
+  background-color: $color;
+}
+//.reset-filter() {
+//  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+//}
+$line-height-base:        1.428571429;
+$font-size-base:          14px;
+$line-height-computed:    floor(($font-size-base * $line-height-base));
+$caret-width-base:          4px;
+$zindex-dropdown:          1000;
+$dropdown-bg:              #fff;
+$dropdown-fallback-border:       #ccc;
+$dropdown-border:                rgba(0,0,0,.15);
+$border-radius-base:        4px;
+$dropdown-divider-bg:            #e5e5e5;
+$gray-dark:              lighten(#000, 20%);   // #333
+$dropdown-link-color:            $gray-dark;
+$dropdown-link-hover-color:      darken($gray-dark, 5%);
+$dropdown-link-hover-bg:         #f5f5f5;
+$component-active-color:    #fff;
+$brand-primary:         $color-high;
+$dropdown-link-active-color:     $component-active-color;
+$component-active-bg:       $brand-primary;
+$dropdown-link-active-bg:        $component-active-bg;
+$gray-light:             lighten(#000, 46.7%);
+$dropdown-link-disabled-color:   $gray-light;
+$dropdown-header-color:          $gray-light;
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+$grid-float-breakpoint:     $screen-sm-min;
+// DROPDOWNS OVERRIDE // END

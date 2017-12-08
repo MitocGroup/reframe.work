@@ -1,0 +1,94 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-14 07:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+#: settings/class-settings.php:174 settings/class-settings.php:175
+msgid "Sticky Posts - Switch"
+msgstr ""
+
+#: settings/class-settings.php:189
+msgid "Sticky Post Settings"
+msgstr ""
+
+#: settings/class-settings.php:225
+msgid "Post Types"
+msgstr ""
+
+#: settings/class-settings.php:252
+msgid "Custom Post Types"
+msgstr ""
+
+#: settings/class-settings.php:259
+msgid "Posts selection"
+msgstr ""
+
+#: settings/class-settings.php:265
+msgid "Dont change the order from the custom post types in the frontend."
+msgstr ""
+
+#: settings/class-settings.php:266
+msgid ""
+"Sticky posts is a WordPress feature only for posts, by default this plugin "
+"also prepare custom post types, to put the posts on the top."
+msgstr ""
+
+#: settings/class-settings.php:275
+msgid "Multilingual settings"
+msgstr ""
+
+#: settings/class-settings.php:285
+msgid "Multilingual posts"
+msgstr ""
+
+#: settings/class-settings.php:291
+msgid "Set all the translations sticky, when one post is set."
+msgstr ""
+
+#: settings/class-settings.php:301
+msgid "Change the display options for the admin sticky post column."
+msgstr ""
+
+#: settings/class-settings.php:305
+msgid "Handle the post selection of custom post types."
+msgstr ""
+
+#: settings/class-settings.php:325
+#, php-format
+msgid "Active multilingual plugin found: %s"
+msgstr ""
+
+#: settings/class-settings.php:329
+msgid "There are no supported multilingual plugins active."
+msgstr ""
+
+#: settings/class-settings.php:334
+#, php-format
+msgid "Supported Plugins: %s, %s"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This plugin adds a sticky post switch functionality to the admin list "
+"post/custom post type pages."
+msgstr ""
+
+#. Author of the plugin
+msgid "Markus Froehlich"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "mailto:markusfroehlich01@gmail.com"
+msgstr ""
