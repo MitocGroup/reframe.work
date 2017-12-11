@@ -7,8 +7,8 @@
 
 
 jQuery(function ($) {
-	const darkIcon = 'http://localhost:8888/wp-content/themes/reframework/assets/images/reframe-logo-dark.svg';
-	const lightIcon = 'http://localhost:8888/wp-content/themes/reframework/assets/images/reframe-logo.svg';
+	const darkIcon = '/wp-content/themes/reframework/assets/images/reframe-logo-dark.svg';
+	const lightIcon = '/wp-content/themes/reframework/assets/images/reframe-logo.svg';
 
 	$('.menu_logo .mdi').on('click', function changeMenu() {
 		const toHide = $('.menu_logo').hasClass('menu-shown');
